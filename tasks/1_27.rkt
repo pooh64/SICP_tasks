@@ -1,0 +1,36 @@
+#lang sicp
+(#%require rackunit)
+
+(define (full-fermat-test n)
+  (define (iter n a)
+    (cond ((= n a) #true)
+	  ((not (= a (expmod a n n))) #false)
+	  (else (iter n (+ a 1)))))
+  (display n)
+  (if (iter n 2)
+      (display " ok")
+      (display " failed"))
+  (newline))
+
+(define (expmod base exp m)
+  (cond ((= exp 0) 1)
+	((even? exp)
+	  (remainder (square (expmod base (/ exp 2) m))
+		     m))
+	(else
+	  (remainder (* base (expmod base (- exp 1) m))
+		     m))))
+
+(define (square a)
+  (* a a))
+
+(full-fermat-test 11)
+(full-fermat-test 17)
+(full-fermat-test 19999)
+(newline)
+(full-fermat-test 561)
+(full-fermat-test 1105)
+(full-fermat-test 1729)
+(full-fermat-test 2465)
+(full-fermat-test 2821)
+(full-fermat-test 6601)
