@@ -16,8 +16,7 @@
 					(next a) next b)
 		  (term a))))
 
-(define (accumulate combiner null-value term a next b)
-  (accumulate-iterative combiner null-value term a next b))
+(define accumulate accumulate-iterative)
 
 (define (product term a next b)
   (accumulate * 1 term a next b))

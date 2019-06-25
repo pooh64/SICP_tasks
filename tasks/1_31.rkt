@@ -14,8 +14,7 @@
       (* (term a)
 	 (product-recursive term (next a) next b))))
 
-(define (product term a next b)
-  (product-iterative term a next b))
+(define product product-iterative)
 
 
 (define (equ x) x)
