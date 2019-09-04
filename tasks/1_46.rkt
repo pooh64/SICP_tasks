@@ -1,5 +1,4 @@
 #lang sicp
-(#%require rackunit)
 
 (define (iterative-improve good-enough? improve)
   (lambda (guess)

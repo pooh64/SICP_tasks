@@ -1,5 +1,4 @@
 #lang sicp
-(#%require rackunit)
 
 (define (product-iterative term a next b)
   (define (product-iter a result)

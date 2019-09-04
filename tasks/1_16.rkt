@@ -1,5 +1,4 @@
 #lang sicp
-(#%require rackunit)
 
 (define (even? a) (= (remainder a 2) 0))
 

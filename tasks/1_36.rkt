@@ -1,5 +1,4 @@
 #lang sicp
-(#%require rackunit)
 
 (define tolerance 0.01)
 

@@ -1,5 +1,4 @@
 #lang sicp
-(#%require rackunit)
 
 (define (choose_2 op a b)
   (if (op a b) a b))

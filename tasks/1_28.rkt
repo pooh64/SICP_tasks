@@ -1,5 +1,4 @@
 #lang sicp
-(#%require rackunit)
 
 (define (timed-prime-test n)
   (display n)

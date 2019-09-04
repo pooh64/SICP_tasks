@@ -1,5 +1,4 @@
 #lang sicp
-(#%require rackunit)
 
 (define (filtered-accumulate filter combiner null-value term a next b)
   (define (filtered-accumulate-iter a result)

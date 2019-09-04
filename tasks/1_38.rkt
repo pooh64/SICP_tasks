@@ -1,5 +1,4 @@
 #lang sicp
-(#%require rackunit)
 
 (define (cont-frac-iterative n d k)
   (define (cont-frac-iter i accum)

@@ -1,5 +1,4 @@
 #lang sicp
-(#%require rackunit)
 
 (define (square a) (* a a))
 (define (cube a) (* a a a))

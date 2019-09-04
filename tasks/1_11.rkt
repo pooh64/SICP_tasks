@@ -1,5 +1,4 @@
 #lang sicp
-(#%require rackunit)
 
 (define (func-recursive n)
   (if (< n 3)

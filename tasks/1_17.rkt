@@ -1,5 +1,4 @@
 #lang sicp
-(#%require rackunit)
 
 (define (double x) (* x 2))
 (define (halve  x) (/ x 2))

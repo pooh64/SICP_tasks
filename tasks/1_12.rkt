@@ -1,5 +1,4 @@
 #lang sicp
-(#%require rackunit)
 
 (define (pascal x y)
   (cond ((= y 1) 1)

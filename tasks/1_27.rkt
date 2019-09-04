@@ -1,5 +1,4 @@
 #lang sicp
-(#%require rackunit)
 
 (define (full-fermat-test n)
   (define (iter n a)

@@ -1,5 +1,4 @@
 #lang sicp
-(#%require rackunit)
 
 (define (cont-frac-recursive n d k)
   (if (= k 1)

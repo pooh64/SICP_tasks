@@ -1,5 +1,4 @@
 #lang sicp
-(#%require rackunit)
 
 (define (smallest-divisor n)
   (find-divisor n 2))

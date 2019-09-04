@@ -1,5 +1,4 @@
 #lang sicp
-(#%require rackunit)
 
 (define (search-for-primes low high)
   (timed-prime-test low)
