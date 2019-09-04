@@ -1,0 +1,20 @@
+TODO: Other text-tasks
+
+2.15
+	sigma(par1) ~ sR1 + sR2 + (sR1 * R1 + sR2 * R2) / (R1 + R2)
+	sigma(par2) ~ (sR1 * R2 + sR2 * R1) / (R1 + R2)
+
+	if R1 > 0, R2 > 0
+	sigma(par1) > sigma(par2)
+
+	That happens because of repetitions of R1 and R2 in par1 as
+	different "measures".
+
+	It is more correct here to estimate the error through
+	partial derivatives d/dR1, d/dR2, so par2 is correct.
+
+2.16
+	Seems like it can be done by "naming" intervals and silently
+	collecting them in one algebraic expression in data structure.
+	Then we must find max(f(x1,x2,x3,...,xn)) on "interval"-
+	closure in Rn. This is true rocket science.
