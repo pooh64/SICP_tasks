@@ -63,12 +63,36 @@
 	max tree depth:  O(n)   (memory)
 	number of steps: O(n^m) (steps, m - number of coin kinds)
 
-TODO:
 1.15
+	12,15 / 3^5 = 0,05  => 5 calls
+	O(log(a))
+
 1.20
+	(206 40), (40, 6), (6, 4), (4, 2), (2, 0) -> 5 gcd calls
+
+	Applicative - one remainder evaluation on each gcd call but last.
+	-> 5 - 1 = 4 remainder calls
+
+	Normal - b evaluation in if-predicate requires:
+		1st gcd call: 0 remainder calls
+		2nd gcd call: 1 remainder call
+		3rd gcd call: 1 remainder call + 1 + 0
+		...
+			c[n] = 1 + c[n-1] + c[n-2]
+		+ last a evaluation when if-predicate = #t
+		=> 0 + 1 + 2 + 4 + 7 + 4 = 18 remainder calls
+
 1.25
+	fast-expt deals with big numbers. Even if interpreter supports
+	arbitary-precision arithmetics it'll be much more complex to evaluate.
+
 1.26
+	New expmod base is still O(log2(n)) depth but has "tree" call
+	structure (double expmod evaluating insted of one in square).
+	In result we have O(2^(log2(n))) = O(n) process.
+
 1.34
+	apply (f f) -> apply (f 2) -> apply (2 2) -> 2 isn't applicable
 
 2.15
 	sigma(par1) ~ sR1 + sR2 + (sR1 * R1 + sR2 * R2) / (R1 + R2)
