@@ -112,3 +112,19 @@
 	collecting them in one algebraic expression in data structure.
 	Then we must find max(f(x1,x2,x3,...,xn)) on "interval"-
 	closure in Rn. This is true rocket science.
+
+2.22
+	(cons (square (car things))
+	       answer)
+
+	Each new value is beginning of the new answer list.
+
+	(cons answer
+	      (square (car things))
+
+	It's like a list, but
+
+	(cons (cons (cons nil
+			  c)
+		    b)
+	      a)
