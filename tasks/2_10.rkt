@@ -39,4 +39,4 @@
 (define i1 (make-interval  3 5))
 (define i2 (make-interval -1 1))
 
-(display-interval (div-interval i1 i2))
+; (display-interval (div-interval i1 i2))	; fails with error
